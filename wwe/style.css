@@ -1,0 +1,231 @@
+/* Общие стили */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+
+    /* Задний фон */
+   /* background: linear-gradient(to bottom, #f0f0f0, #e0e0e0); /* Градиент */
+    /* Или можешь использовать изображение: */
+    background: url('https://www.linline-clinic.ru/sites/default/files/styles/paragraph_50/public/images/others/2021-06/43e3b55d-115a-4103-9f7f-89cec5f55645_0.jpg?itok=5otnBcI_'); 
+    background-size: cover; /* Чтобы изображение заполняло весь экран */
+    background-attachment: fixed; /* Чтобы фон не прокручивался */
+
+    color: #151414;
+}
+
+header {
+    background-color: white(211, 203, 203, 0.9); /* Темный фон для шапки с прозрачностью */
+    color: #161616;
+    padding: 1rem 0;
+    text-align: center;
+
+    /* Анимация появления */
+    animation: fadeInDown 1s ease-in-out forwards;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #0f0e0e;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+nav a:hover {
+    color: #aaf; /* Изменение цвета при наведении */
+}
+
+main {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 960px; /* Ограничение ширины контента */
+    background-color: whit; /* Белый фон с прозрачностью */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+    border-radius: 8px; /* Скругление углов */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: rgba(51, 51, 51, 0.9); /* Темный фон с прозрачностью */
+    color: #fff;
+}
+
+/* Стили для главной страницы */
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+
+    /* Анимация появления слева и справа */
+    /*animation: fadeInUp 1s ease-in-out forwards;*/
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 2rem;
+    animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+.hero-image {
+    flex: 1;
+    animation: fadeInRight 1s ease-in-out forwards;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.hero-image img:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+}
+
+.advantages {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    flex-wrap: wrap; /* Перенос элементов на новую строку при необходимости */
+}
+
+.advantage {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem; /* Отступ между блоками */
+    width: 30%; /* Чтобы помещалось 3 элемента в ряд */
+    box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+     animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.advantage img {
+    max-width: 80px;
+    height: auto;
+}
+
+/* Стили для страницы "Цены и запись" */
+.prices table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.prices th, .prices td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.prices th {
+    background-color: #f2f2f2;
+}
+
+.prices form {
+    margin-top: 20px;
+}
+
+.prices label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.prices input[type="text"],
+.prices input[type="tel"],
+.prices input[type="email"],
+.prices input[type="date"],
+.prices textarea {
+    width: 300px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease; /* Анимация при фокусе */
+}
+
+.prices input[type="text"]:focus,
+.prices input[type="tel"]:focus,
+.prices input[type="email"]:focus,
+.prices input[type="date"]:focus,
+.prices textarea:focus {
+    border-color: rgb(204, 204, 216); /* Изменение цвета рамки при фокусе */
+    outline: none; /* Убираем стандартную обводку */
+}
+
+/* Кнопка */
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+.button:hover {
+    background-color: #3e8e41; /* Более темный цвет при наведении */
+}
+
+/* Анимации */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
